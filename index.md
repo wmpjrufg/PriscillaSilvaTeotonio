@@ -5,6 +5,6 @@
 <h2>Índice</h2>
 
 <ul>
-    <li><a href="https://github.com/wmpjrufg/PriscillaSilvaTeotonio.git/MOMENTOINERCIA.html">Acesso a calculadora de Momento de Inércia</a></li>
+    <li><a href="https://github.com/wmpjrufg/PriscillaSilvaTeotonio/blob/gh-pages/MOMENTOINERCIA.html">Acesso a calculadora de Momento de Inércia</a></li>
     <li><a href="url">Exemplo</a></li>
 </ul>
