@@ -1,3 +1,6 @@
-<h1>Momento de Inércia<h1>
+<h1>Resumo da IC<h1>
 
-<p align = "justify">Este é um programa para calcular o Momento de Inércia de uma seção desenvolvido por Priscilla Sila Teotônio.</p>
+<h2>Índice</h2>
+
+
+
