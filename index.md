@@ -1,3 +1,3 @@
-<h1>Concreto Protendido<h1>
+<h1>Momento de Inércia<h1>
 
-<p align = "justify">Este é o programa de concreto protendido desenvolvido por xxxx.</p>
+<p align = "justify">Este é um programa para calcular o Momento de Inércia de uma seção desenvolvido por Priscilla Sila Teotônio.</p>
