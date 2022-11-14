@@ -6,5 +6,5 @@
 
 <ul>
     <li><a href="https://github.com/wmpjrufg/PriscillaSilvaTeotonio/blob/gh-pages/MOMENTOINERCIA.md">Acesso a teoria</a></li>
-    <li><a href="url">Exemplo</a></li>
+    <li><a href="https://github.com/wmpjrufg/PriscillaSilvaTeotonio/blob/gh-pages/CALCULADORA.md">Acesso a Calculadora</a></li>
 </ul>
