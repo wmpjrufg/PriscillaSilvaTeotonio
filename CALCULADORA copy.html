@@ -32,26 +32,38 @@
 							</td>
 						</tr>
 						<tr>   <!-- \( valor \) para math comments-->
-							<td>Valor 1 (\(x_1\)):</td>
+							<td>Valor da base em relação ao eixo x(\(b_x\)):</td>
 							<td><input type = "number" id = "valor_1" size = "40"> <br></td>
 						</tr>
 						<tr>
-							<td>Valor 2 (\(x_1\)):</td>
+							<td>Valor da altura em relação ao eixo x(\(h_x\)):</td>
 							<td><input type = "number" id = "valor_2" size = "40"> <br></td>
+						</tr>
+						<tr>   <!-- \( valor \) para math comments-->
+							<td>Valor da base em relação ao eixo y(\(b_y\)):</td>
+							<td><input type = "number" id = "valor_3" size = "40"> <br></td>
+						</tr>
+						<tr>
+							<td>Valor da altura em relação ao eixo y(\(h_y\)):</td>
+							<td><input type = "number" id = "valor_4" size = "40"> <br></td>
 						</tr>
 					</table>
 				</div>
 					<br>
 					<button id = 'calcular'>Calcular</button>
 				<h3>Processamento:</h3>	
-					<p>Qual o valor 1:</p>
+					<p>Qual o valor da base em relação a x:</p>
 					<p id = "valor_11"></p>
-					<p>Qual o valor 1:</p>
-					<p id = "valor22"></p>	
+					<p>Qual o valor da altura em relação a x:</p>
+					<p id = "valor22"></p>
+					<p>Qual o valor da base em relação a y:</p>
+					<p id = "valor_33"></p>
+					<p>Qual o valor da altura em relação a y:</p>
+					<p id = "valor44"></p>	
 					<p>Operação escolhida:</p>
 					<p id = "operacaoo"></p>
 				<h3>Resultados:</h3>
-					<p>Resposta (\(x_{final}\)):</p>
+					<p>Resposta (\(I_x\)):</p>
 					<p id = "resultado"></p>
 	<script>
 		function CALCULADORA() {	
