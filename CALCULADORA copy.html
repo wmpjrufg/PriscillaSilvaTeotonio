@@ -32,34 +32,46 @@
 							</td>
 						</tr>
 						<tr>   <!-- \( valor \) para math comments-->
-							<td>Valor da base em relação ao eixo x(\(b_x\)):</td>
+							<td>Valor de \(b_1\):</td>
 							<td><input type = "number" id = "valor_1" size = "40"> <br></td>
 						</tr>
 						<tr>
-							<td>Valor da altura em relação ao eixo x(\(h_x\)):</td>
+							<td>Valor de \(h_1\):</td>
 							<td><input type = "number" id = "valor_2" size = "40"> <br></td>
 						</tr>
 						<tr>   <!-- \( valor \) para math comments-->
-							<td>Valor da base em relação ao eixo y(\(b_y\)):</td>
+							<td>Valor de \(b_2\):</td>
 							<td><input type = "number" id = "valor_3" size = "40"> <br></td>
 						</tr>
 						<tr>
-							<td>Valor da altura em relação ao eixo y(\(h_y\)):</td>
+							<td>Valor de \(h_2\):</td>
 							<td><input type = "number" id = "valor_4" size = "40"> <br></td>
+						</tr>
+						<tr>   <!-- \( valor \) para math comments-->
+							<td>Valor de \(b_3\):</td>
+							<td><input type = "number" id = "valor_5" size = "40"> <br></td>
+						</tr>
+						<tr>
+							<td>Valor de \(h_3\):</td>
+							<td><input type = "number" id = "valor_6" size = "40"> <br></td>
 						</tr>
 					</table>
 				</div>
 					<br>
 					<button id = 'calcular'>Calcular</button>
 				<h3>Processamento:</h3>	
-					<p>Qual o valor da base em relação a x:</p>
+					<p>Qual o valor de \(b_1\):</p>
 					<p id = "valor_11"></p>
-					<p>Qual o valor da altura em relação a x:</p>
-					<p id = "valor22"></p>
-					<p>Qual o valor da base em relação a y:</p>
+					<p>Qual o valor de \(h_1\):</p>
+					<p id = "valor_22"></p>
+					<p>Qual o valor de \(b_2\):</p>
 					<p id = "valor_33"></p>
-					<p>Qual o valor da altura em relação a y:</p>
-					<p id = "valor44"></p>	
+					<p>Qual o valor de \(h_2\):</p>
+					<p id = "valor_44"></p>	
+					<p>Qual o valor de \(b_3\):</p>
+					<p id = "valor_55"></p>
+					<p>Qual o valor de \(h_3\):</p>
+					<p id = "valor_66"></p>	
 					<p>Operação escolhida:</p>
 					<p id = "operacaoo"></p>
 				<h3>Resultados:</h3>
@@ -68,13 +80,17 @@
 	<script>
 		function CALCULADORA() {	
 			/*
-			Esta função determina o comprimento de ancoragem de uma barra de aço em concreto.
+			Esta função determina o momento de inércia em relação a x e a y de uma seção transversal.
 			*/
 			const VALOR_1 = document.getElementById("valor_1").value;
 			const VALOR_2 = document.getElementById("valor_2").value;
+			const VALOR_3 = document.getElementById("valor_3").value;
+			const VALOR_4 = document.getElementById("valor_4").value;
+			const VALOR_5 = document.getElementById("valor_5").value;
+			const VALOR_6 = document.getElementById("valor_6").value;
 			const OP = document.getElementById("operacao").value;
 
-			// Cálculo do comprimento de ancoragem conforme item 9.3.2.1 da NBR 6118 (2014)
+			// Cálculo do Momento de Inércia 
 			if (OP == '+') {
 				// soma
 				RESULTADO = VALOR_1 + VALOR_2;
