@@ -1,4 +1,4 @@
-<h1>Momento de Inércia<h1>
+<h1>Momento de Inércia</h1>
 
 <p align = "justify">Este repositório é destinado a criação do sistema de teste da ferramenta de calculo do Momento de Inércia de uma seção desenvolvido pela discente Priscilla Silva Teotônio.</p>
 
