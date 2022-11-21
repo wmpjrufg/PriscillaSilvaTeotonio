@@ -92,6 +92,15 @@
 			const VALOR_6 = document.getElementById("valor_6").value;
 			const OP = document.getElementById("operacao").value;
 
+			// Cálculo do centroide para ser usado na formula do Momento de inércia  
+			if (OP == '\(I_x\)') {
+				// Centroide em x
+				RESULTADO = (((VALOR_1*(VALOR_2)^3)/12)+VALOR_1*VALOR_2*()^2)+(((VALOR_3*(VALOR_4)^3)/12)+VALOR_3*VALOR_4*()^2)+(((VALOR_5*(VALOR_6)^3)/12)+VALOR_5*VALOR_6*()^2);
+			} else if (OP == '\(I_y\)') {
+				// Centroide em y
+				RESULTADO = (((VALOR_2*(VALOR_1)^3)/12)+VALOR_1*VALOR_2*()^2)+(((VALOR_4*(VALOR_3)^3)/12)+VALOR_3*VALOR_4*()^2)+(((VALOR_6*(VALOR_5)^3)/12)+VALOR_5*VALOR_6*()^2);
+			}
+
 			// Cálculo do Momento de Inércia 
 			if (OP == '\(I_x\)') {
 				// Momento de Inércia em x
