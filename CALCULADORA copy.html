@@ -76,7 +76,9 @@
 					<p id = "operacaoo"></p>
 				<h3>Resultados:</h3>
 					<p>Resposta (\(I_x\)):</p>
-					<p id = "resultado"></p>
+					<p id = "resultado1"></p>
+					<p>Resposta (\(I_y\)):</p>
+					<p id = "resultado2"></p>
 	<script>
 		function CALCULADORA() {	
 			/*
@@ -91,23 +93,21 @@
 			const OP = document.getElementById("operacao").value;
 
 			// Cálculo do Momento de Inércia 
-			if (OP == '+') {
-				// soma
-				RESULTADO = VALOR_1 + VALOR_2;
-			} else if (OP == '-') {
-				// subtração
-				RESULTADO = VALOR_1 - VALOR_2;
-			} else if (OP == '/') {
-				// divisão
-				RESULTADO = VALOR_1 / VALOR_2;
-			} else if (OP == '*') {
-				// substração
-				RESULTADO = VALOR_1 * VALOR_2;
+			if (OP == '\(I_x\)') {
+				// Momento de Inércia em x
+				RESULTADO = (((VALOR_1*(VALOR_2)^3)/12)+VALOR_1*VALOR_2*()^2)+(((VALOR_3*(VALOR_4)^3)/12)+VALOR_3*VALOR_4*()^2)+(((VALOR_5*(VALOR_6)^3)/12)+VALOR_5*VALOR_6*()^2);
+			} else if (OP == '\(I_y\)') {
+				// Momento de Inércia em y
+				RESULTADO = (((VALOR_2*(VALOR_1)^3)/12)+VALOR_1*VALOR_2*()^2)+(((VALOR_4*(VALOR_3)^3)/12)+VALOR_3*VALOR_4*()^2)+(((VALOR_6*(VALOR_5)^3)/12)+VALOR_5*VALOR_6*()^2);
 			}
 			
 			// Processamento
 			document.querySelector('#valor_11').textContent = VALOR_1;
 			document.querySelector('#valor_22').textContent = VALOR_2;
+			document.querySelector('#valor_33').textContent = VALOR_3;
+			document.querySelector('#valor_44').textContent = VALOR_4;
+			document.querySelector('#valor_55').textContent = VALOR_5;
+			document.querySelector('#valor_66').textContent = VALOR_6;
 			document.querySelector('#operacaoo').textContent = OP;
 			
 			// Resultado final
