@@ -16,3 +16,4 @@
 
 <p align = "justify">Para o uso da calculadora deve-se utilizar as seguintes simbologias mostradas na imagem para realizar a atribuição dos valores:</p>
 
+<p align = "center"><img src="https://github.com/wmpjrufg/PriscillaSilvaTeotonio/blob/gh-pages/figura%20com%20nomes%20momento%20de%20inercia.jpg"></p>
