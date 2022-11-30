@@ -31,28 +31,22 @@
 							</td>
 						</tr>
 						<tr>   <!-- \( valor \) para math comments-->
-							<td>Valor do raio interno (\(r\)):</td>
+							<td>Valor do diametro interno (\(d\)):</td>
 							<td><input type = "number" id = "valor_1" size = "40"> <br></td>
 						</tr>
 						<tr>
-							<td>Valor do raio externo (\(R\)):</td>
+							<td>Valor do diametro total (\(D\)):</td>
 							<td><input type = "number" id = "valor_2" size = "40"> <br></td>
-						</tr>
-						<tr>   <!-- \( valor \) para math comments-->
-							<td>Valor da massa (\(m\)):</td>
-							<td><input type = "number" id = "valor_3" size = "40"> <br></td>
 						</tr>
 					</table>
 				</div>
 					<br>
 					<button id = 'calcular'>Calcular</button>
 				<h3>Processamento:</h3>	
-					<p>Qual o valor do raio interno (\(r\)):</p>
+					<p>Qual o valor do diametro interno (\(d\)):</p>
 					<p id = "valor_11"></p>
-					<p>Qual o valor do raio externo (\(R\)):</p>
+					<p>Qual o valor do diametro total (\(D\)):</p>
 					<p id = "valor_22"></p>
-					<p>Qual o valor da massa (\(m\)):</p>
-					<p id = "valor_33"></p>
 					<p>Operação escolhida:</p>
 					<p id = "operacaoo"></p>
 				<h3>Resultados:</h3>
@@ -65,18 +59,16 @@
 			*/
 			const VALOR_1 = document.getElementById("valor_1").value;
 			const VALOR_2 = document.getElementById("valor_2").value;
-			const VALOR_3 = document.getElementById("valor_3").value;
 			const OP = document.getElementById("operacao").value;
 
 			// Cálculo do Momento de Inércia 
 			if (OP == '\(I\)') {
 				// Momento de Inércia em x
-				RESULTADO= VALOR_3/2*(VALOR_1^2+VALOR_2^2)
+				RESULTADO= ((3,14*(VALOR_2^4-VALOR_1^4))/64)
 			
 			// Processamento
 			document.querySelector('#valor_11').textContent = VALOR_1;
 			document.querySelector('#valor_22').textContent = VALOR_2;
-			document.querySelector('#valor_33').textContent = VALOR_3;
 			document.querySelector('#operacaoo').textContent = OP;
 			
 			// Resultado final
