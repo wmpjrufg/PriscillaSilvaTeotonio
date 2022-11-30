@@ -24,3 +24,6 @@
 
 <h3>Momento de Inércia de um círculo vazado</h3>
 
+<p align = "justify">Para o uso da calculadora desse momento de inércia deve-se utilizar as seguintes simbologias mostradas na imagem para realizar a atribuição dos valores:</p>
+
+<p align = "center"><img src="https://github.com/wmpjrufg/PriscillaSilvaTeotonio/blob/gh-pages/figura%20circulo%20vazado.jpg"></p>
