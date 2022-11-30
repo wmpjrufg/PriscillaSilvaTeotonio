@@ -4,7 +4,7 @@
 
 <h3>Definição</h3>
 
-<p align = "justify">O momento de inércia de um objeto em relação a um eixo é a propriedade do objeto que o faz resistir a uma variação em sua velocidade vetorial angular em relação ao eixo.</p>
+<p align = "justify">O momento de inércia de um objeto em relação a um eixo é a propriedade do objeto que o faz resistir a uma variação em sua velocidade vetorial angular em relação ao eixo. É a distância do objeto até o eixo de rotação em metros.</p>
 
 <h3>O teorema dos eixos paralelos</h3>
 
