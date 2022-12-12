@@ -32,11 +32,11 @@
 						</tr>
 						<tr>   <!-- \( valor \) para math comments-->
 							<td>Valor do diametro interno (\(d\)):</td>
-							<td><input type = "number" id = "valor_1" size = "40"> <br></td>
+							<td><input type = "number" id = "d" size = "40"> <br></td>
 						</tr>
 						<tr>
 							<td>Valor do diametro total (\(D\)):</td>
-							<td><input type = "number" id = "valor_2" size = "40"> <br></td>
+							<td><input type = "number" id = "D" size = "40"> <br></td>
 						</tr>
 					</table>
 				</div>
@@ -44,9 +44,9 @@
 					<button id = 'calcular'>Calcular</button>
 				<h3>Processamento:</h3>	
 					<p>Qual o valor do diametro interno (\(d\)):</p>
-					<p id = "valor_11"></p>
+					<p id = "dd"></p>
 					<p>Qual o valor do diametro total (\(D\)):</p>
-					<p id = "valor_22"></p>
+					<p id = "DD"></p>
 					<p>Operação escolhida:</p>
 					<p id = "operacaoo"></p>
 				<h3>Resultados:</h3>
@@ -57,18 +57,18 @@
 			/*
 			Esta função determina o momento de inércia em relação a x e a y de uma seção transversal.
 			*/
-			const VALOR_1 = document.getElementById("valor_1").value;
-			const VALOR_2 = document.getElementById("valor_2").value;
+			const d_ = document.getElementById("d").value;
+			const D_ = document.getElementById("D").value;
 			const OP = document.getElementById("operacao").value;
 
 			// Cálculo do Momento de Inércia 
 			if (OP == '\(I\)') {
 				// Momento de Inércia em x
-				RESULTADO= ((3,14*(VALOR_2^4-VALOR_1^4))/64)
+				RESULTADO= ((3,14*(D_^4-d_^4))/64)
 			
 			// Processamento
-			document.querySelector('#valor_11').textContent = VALOR_1;
-			document.querySelector('#valor_22').textContent = VALOR_2;
+			document.querySelector('#dd').textContent = d_;
+			document.querySelector('#DD').textContent = D_;
 			document.querySelector('#operacaoo').textContent = OP;
 			
 			// Resultado final
