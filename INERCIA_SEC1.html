@@ -1,6 +1,6 @@
 <html lang = "pt-BR">
   	<head>
-		<title>Mecânica das Estruturas - Inércia</title>
+		<title>Mecânica das Estruturas - Inércia da seção</title>
 		<style>
 			.entradas{
 				width: 350px;
@@ -18,19 +18,12 @@
   	<body>
 		<h1><b>CALCULADORA DE MOMENTO DE INÉRCIA</b></h1>
 			<h2><b>Momento de Inércia da área da seção transversal</b></h2>
+				
+				<img src = "ret.jpg" alt = "some text" width = 50%>
+
 				<div class = 'entradas'>
 				<h3>Entradas:</h3>
 					<table>
-						<tr>
-							<td>Operação:</td> <!--Linha 1 da tabela-->
-							<td>            <!--Linha 2 da tabela-->
-								<select id = "operacao">
-									<option value = "" data-default disabled selected></option>
-									<option value = "INERCIA AREA RETANGULAR EM X">\(I_x\)</option>
-									<option value = "INERCIA AREA RETANGULAR EM Y">\(I_y\)</option>
-								</select>
-							</td>
-						</tr>
 						<tr>   <!-- \( valor \) para math comments-->
 							<td>Valor de \(b_1\):</td>
 							<td><input type = "number" id = "b_1" size = "40"> <br></td>
@@ -71,9 +64,13 @@
 					<p>Qual o valor de \(b_3\):</p>
 					<p id = "b_333"></p>
 					<p>Qual o valor de \(h_3\):</p>
+<<<<<<< HEAD:RETANG.CALCULADORA copy.html
 					<p id = "h_33"></p>	
 					<p>Operação escolhida:</p>
 					<p id = "operacaoo"></p>
+=======
+					<p id = "valor_66"></p>	
+>>>>>>> 0f655442e5de79a5bbf338a3ff145c7bdb6b9c92:INERCIA_SEC1.html
 				<h3>Resultados:</h3>
 					<p>Resposta (\(I_x\)):</p>
 					<p id = "resultado11"></p>
@@ -90,25 +87,13 @@
 			const VALOR_4 = document.getElementById("valor_4").value;
 			const VALOR_5 = document.getElementById("valor_5").value;
 			const VALOR_6 = document.getElementById("valor_6").value;
-			const OP = document.getElementById("operacao").value;
 
 			// Cálculo do centroide para ser usado na formula do Momento de inércia  
-			if (OP == 'I_x') {
-				// Centroide em x
-				CENTROIDE_TOTAL_X = (VALOR_1*VALOR_1*VALOR_2+VALOR_3*VALOR_3*VALOR_4+VALOR_5*VALOR_5*VALOR_6)/(VALOR_1*VALOR_2+VALOR_3*VALOR_4+VALOR_5*VALOR_6);
-			} else if (OP == 'I_y') {
-				// Centroide em y
-				CENTROIDE_TOTAL_Y = (VALOR_2*VALOR_1*VALOR_2+VALOR_4*VALOR_3*VALOR_4+VALOR_6*VALOR_5*VALOR_6)/(VALOR_1*VALOR_2+VALOR_3*VALOR_4+VALOR_5*VALOR_6);
-			}
+			X_BAR = (VALOR_1*VALOR_1*VALOR_2+VALOR_3*VALOR_3*VALOR_4+VALOR_5*VALOR_5*VALOR_6)/(VALOR_1*VALOR_2+VALOR_3*VALOR_4+VALOR_5*VALOR_6);
+			Y_BAR = (VALOR_2*VALOR_1*VALOR_2+VALOR_4*VALOR_3*VALOR_4+VALOR_6*VALOR_5*VALOR_6)/(VALOR_1*VALOR_2+VALOR_3*VALOR_4+VALOR_5*VALOR_6);
 
-			// Cálculo do Momento de Inércia 
-			if (OP == 'I_x') {
-				// Momento de Inércia em x
-				RESULTADO1= (((VALOR_1*(VALOR_2)^3)/12)+VALOR_1*VALOR_2*(CENTROIDE_TOTAL_X-(VALOR_1/2))^2)+(((VALOR_3*(VALOR_4)^3)/12)+VALOR_3*VALOR_4*(CENTROIDE_TOTAL_X-(VALOR_3/2))^2)+(((VALOR_5*(VALOR_6)^3)/12)+VALOR_5*VALOR_6*(CENTROIDE_TOTAL_X-(VALOR_5/2))^2);
-			} else if (OP == 'I_y') {
-				// Momento de Inércia em y
-				RESULTADO2 = (((VALOR_2*(VALOR_1)^3)/12)+VALOR_1*VALOR_2*(CENTROIDE_TOTAL_Y-(VALOR_2/2))^2)+(((VALOR_4*(VALOR_3)^3)/12)+VALOR_3*VALOR_4*(CENTROIDE_TOTAL_Y-(VALOR_4/2))^2)+(((VALOR_6*(VALOR_5)^3)/12)+VALOR_5*VALOR_6*(CENTROIDE_TOTAL_Y-(VALOR_6/2))^2);
-			}
+			I_X = (((VALOR_1*(VALOR_2)^3)/12)+VALOR_1*VALOR_2*(X_BAR-(VALOR_1/2))^2)+(((VALOR_3*(VALOR_4)^3)/12)+VALOR_3*VALOR_4*(X_BAR-(VALOR_3/2))^2)+(((VALOR_5*(VALOR_6)^3)/12)+VALOR_5*VALOR_6*(X_BAR-(VALOR_5/2))^2);
+			I_Y = (((VALOR_2*(VALOR_1)^3)/12)+VALOR_1*VALOR_2*(Y_BAR-(VALOR_2/2))^2)+(((VALOR_4*(VALOR_3)^3)/12)+VALOR_3*VALOR_4*(Y_BAR-(VALOR_4/2))^2)+(((VALOR_6*(VALOR_5)^3)/12)+VALOR_5*VALOR_6*(Y_BAR-(VALOR_6/2))^2);
 			
 			// Processamento
 			document.querySelector('#valor_11').textContent = VALOR_1;
@@ -117,11 +102,10 @@
 			document.querySelector('#valor_44').textContent = VALOR_4;
 			document.querySelector('#valor_55').textContent = VALOR_5;
 			document.querySelector('#valor_66').textContent = VALOR_6;
-			document.querySelector('#operacaoo').textContent = OP;
 			
 			// Resultado final
-			document.querySelector('#resultado11').textContent = RESULTADO1;
-			document.querySelector('#resultado22').textContent = RESULTADO2;
+			document.querySelector('#resultado11').textContent = I_X;
+			document.querySelector('#resultado22').textContent = I_Y;
 			}
 		// Função de chamada do clique do botão
 		const PROCESSAR = document.getElementById("calcular");
